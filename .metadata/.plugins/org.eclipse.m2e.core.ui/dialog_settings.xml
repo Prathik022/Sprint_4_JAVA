@@ -71,6 +71,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\prr\eclipse-workspace\Sp4_SpringBoot_Application"/>
+			<item value="C:\Users\prr\eclipse-workspace\SpringBoot_Application"/>
 			<item value="C:\Users\prr\Downloads\demo (1)"/>
 			<item value="C:\Users\prr\eclipse-workspace\demo"/>
 		</list>

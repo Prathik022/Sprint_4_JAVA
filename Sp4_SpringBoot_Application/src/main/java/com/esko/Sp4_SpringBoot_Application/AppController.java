@@ -15,7 +15,6 @@ public class AppController {
 	User user;
 	@GetMapping("{userName}")
 	public User getUserDetails(String userName) {
-		
 		return user;
 	}
 	
