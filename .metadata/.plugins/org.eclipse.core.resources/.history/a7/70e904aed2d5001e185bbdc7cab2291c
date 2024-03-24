@@ -1,0 +1,48 @@
+package sample;
+import java.sql.*;
+ 
+ 
+public class Connector {
+    
+    private static final String URL = "jdbc:mysql://localhost:3306/testing";
+    private static final String USER = "root";
+    private static final String PASSWORD = "prathik";
+ 
+    
+    public static void main(String[] args) {
+    	long startTime = System.nanoTime();
+        try {
+           
+            Class.forName("com.mysql.cj.jdbc.Driver");
+ 
+          
+            try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
+                
+                String sql = "INSERT INTO details (randNum) VALUES (?)";
+                try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                
+                    for (int i = 1; i <= 10000; i++) {
+                        pstmt.setInt(1, i);
+                        
+ 
+                        
+                        pstmt.addBatch();
+ 
+                   
+                    }
+                    
+                    pstmt.executeBatch();
+                    System.out.println("All records inserted successfully.");
+                }
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+        long endTime   = System.nanoTime();
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime);
+            
+    }
+    
+    
+}

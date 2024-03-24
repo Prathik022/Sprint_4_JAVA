@@ -1,0 +1,38 @@
+package auth;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String args[]){		
+		//boolean flag = obj.loginCheck(userName, password);
+		//boolean flag = obj.registerUser(userName, password);
+		//System.out.print(flag);
+		menu();
+	}
+	public static void menu() {
+		QueryExecutor obj = new QueryExecutor();
+		System.out.println("Hello! Do you want to \n1. Login 2. Register 3. Exit");
+		int choice = input.nextInt();
+		System.out.print("Enter Username : ");
+		String userName = input.next();
+		System.out.print("\nEnter Password : ");
+		String password = input.next();
+		do {
+			Scanner input = new Scanner(System.in);
+			switch(choice) {
+			case 1:{
+				boolean flag = obj.loginCheck(userName, password);
+				break;
+			}case 2:{
+				boolean flag = obj.registerUser(userName, password);
+				break;
+			}case 3:{
+				break;
+			}default:{
+				System.out.println("Give correct input");
+				break;
+			}
+			}
+		}while(choice != 3);
+	}
+}

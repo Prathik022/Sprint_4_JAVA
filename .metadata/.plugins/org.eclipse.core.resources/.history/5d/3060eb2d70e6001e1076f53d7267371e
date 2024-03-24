@@ -1,0 +1,58 @@
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String args[]){		
+		//boolean flag = obj.loginCheck(userName, password);
+		//boolean flag = obj.registerUser(userName, password);
+		//System.out.print(flag);
+		menu();
+	}
+	public static void menu() {
+		QueryExecutor obj = new QueryExecutor();
+		Scanner input = new Scanner(System.in);
+		int choice = -1;
+		do {
+			System.out.println("Hello! Do you want to \n1. Login 2. Register 3. Delete 4.Exit");
+			try {
+				choice = input.nextInt();
+			}catch(InputMismatchException e) {
+				System.out.println(e);
+				input.nextLine();
+				System.out.println("Type only Numbers");
+				choice = input.nextInt();
+			}
+			switch(choice) {
+			case 1:{
+				System.out.print("Enter Username : ");
+				String userName = input.next();
+				System.out.print("\nEnter Password : ");
+				String password = input.next();
+				boolean flag = obj.loginCheck(userName, password);
+				break;
+			}case 2:{
+				System.out.print("Enter Username : ");
+				String userName = input.next();
+				System.out.print("\nEnter Password : ");
+				String password = input.next();
+				boolean flag = obj.registerUser(userName, password);
+				break;
+			}case 3:{
+				System.out.print("Enter Username : ");
+				String userName = input.next();
+				System.out.print("\nEnter Password : ");
+				String password = input.next();
+				boolean flag = obj.deleteUser(userName,password);
+				break;
+			}case 4:{
+				break;
+			}default:{
+				System.out.println("Give correct input");
+				break;
+			}
+			}
+		}while(choice != 4);
+		input.close();
+	}
+}

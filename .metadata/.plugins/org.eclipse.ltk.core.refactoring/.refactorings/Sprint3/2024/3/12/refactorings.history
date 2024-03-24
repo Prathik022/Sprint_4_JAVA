@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;main&apos;&#x0D;&#x0A;- Original project: &apos;Sprint3&apos;&#x0D;&#x0A;- Destination element: &apos;main&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     auth.ConnectDatabase.java&#x0D;&#x0A;     auth.Main.java&#x0D;&#x0A;     auth.QueryExecutor.java" description="Copy compilation units" element1="/src&lt;auth{ConnectDatabase.java" element2="/src&lt;auth{Main.java" element3="/src&lt;auth{QueryExecutor.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1710905174857" target="/mavenproject/src/main" units="3" version="1.0"/>
+</session>

@@ -1,0 +1,22 @@
+package auth;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String args[]){
+		QueryExecutor obj = new QueryExecutor();
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter Username : ");
+		String userName = input.next();
+		System.out.print("\nEnter Password : ");
+		String password = input.next();
+		//boolean flag = obj.loginCheck(userName, password);
+		//boolean flag = obj.registerUser(userName, password);
+		//System.out.print(flag);
+		menu();
+		input.close();
+	}
+	public static void menu() {
+		System.out.println("Hello! Do you want to \n 1. Login 2. Register");
+	}
+}
